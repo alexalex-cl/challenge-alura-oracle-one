@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 st.set_page_config(page_title="Asistente IA - Oracle ONE", page_icon="🤖")
-st.title("🤖 Asistente Virtual de Inventario y Políticas")
-st.caption("Oracle ONE / Alura LATAM - Tech AI Builder")
+st.title("🤖 Asistente Virtual de Inventario y Políticas - Mercado Central 24h")
+st.caption("Oracle ONE / Alura LATAM - Tech AI Builder / Challenge")
 
 # Obtener clave API (local desde .env o desde Secrets en Streamlit Cloud)
 api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
@@ -56,7 +56,7 @@ if prompt := st.chat_input("Consulta sobre el inventario o las políticas..."):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        prompt_completo = f"Con base en la siguiente información de la empresa:\n{contexto_base}\n\nResponde a la consulta del usuario de forma precisa:\n{prompt}"
+        prompt_completo = f"Con base en la siguiente información de la empresa:\n{contexto_base}\n\nResponde a la consulta del usuario de forma precisa, esquemática y resumida:\n{prompt}"
         
         response = client.models.generate_content(
             model="gemini-2.5-flash",
