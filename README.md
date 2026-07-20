@@ -1,37 +1,47 @@
-# Asistente Virtual Inteligente - Tech AI Builder (Oracle ONE / Alura LATAM)
+# 🛒 Asistente Inteligente de Inventario y Políticas - Supermercado LATAM
+> **Challenge Tech AI Builder - Oracle ONE / Alura LATAM**
 
-Proyecto desarrollado para la integración de modelos de lenguaje (Gemini API) con datos locales (archivos CSV y PDFs de inventario/políticas).
+Una aplicación web interactiva impulsada por Inteligencia Artificial (**Google Gemini API**) que permite consultar dinámicamente el estado del inventario de un supermercado (datos estructurados CSV) y las políticas operativas/comerciales de la empresa (documentos PDF no estructurados).
 
-## 🚀 Tecnologías Utilizadas
-* Python 3.14+
-* Google GenAI SDK (`google-genai`)
-* Pandas
-* PyPDF
-* Python-dotenv
+---
 
-## 🛠️ Configuración e Instalación
+### 🌐 Aplicación en Producción
+👉 **Accede a la App Desplegada:** [Asistente Supermercado LATAM](https://alexalex-cl-challenge-techaibuilder.streamlit.app/)
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/alexalex-cl/challenge-alura-oracle-one.git
-   cd challenge-alura-oracle-one
+---
 
+## 📌 Características Principales
 
+* **Consulta de Inventario en Tiempo Real (CSV):** Análisis dinámico del archivo `inventario_de_supermercado_latam.csv` para verificar stock, precios, fechas de vencimiento, categorías y estado de productos.
+* **Procesamiento de Políticas (RAG / PDFs):** Lectura e integración de 4 documentos PDF con políticas internas de devolución, promociones, almacenamiento y atención al cliente.
+* **Procesamiento de Lenguaje Natural (PLN):** Respuestas precisas y contextualmente relevantes generadas por el modelo **Gemini 1.5 / 2.0**.
+* **Interfaz Web Intuitiva:** Desarrollada con **Streamlit** para ofrecer una experiencia fluida e interactiva en la nube.
+* **Despliegue Continuo:** Alojamientos e integración continua a través de **Streamlit Community Cloud**.
 
-# 🛒 Asistente Virtual de Inventarios y Políticas - Mercado Central 24h
+---
 
-Este proyecto consiste en una solución de Inteligencia Artificial basada en la API de Google Gemini (modelo `gemini-2.5-flash`), diseñada para actuar como un asistente inteligente capaz de cruzar datos de inventarios masivos en CSV con documentos reglamentarios en PDF.
+## 🛠️ Tecnologías Utilizadas
 
-## 🚀 Características Principales
+* **Lenguaje:** Python 3.10+
+* **Interfaz Web:** Streamlit
+* **Modelo LLM / AI:** Google Gemini API (`google-generativeai`)
+* **Procesamiento de Datos:** Pandas
+* **Lectura de PDFs:** PyPDF2 / pdfplumber
+* **Gestión de Entorno:** `python-dotenv`
+* **Control de Versiones y Despliegue:** Git, GitHub, Streamlit Cloud
 
-- **Procesamiento de Datos:** Carga y limpieza dinámica de archivos CSV con `pandas`.
-- **Análisis Multi-documento:** Extracción automática de texto de múltiples políticas en formato PDF mediante `pypdf`.
-- **Integración con IA:** Consultas contextualmente enriquecidas a la API de Google GenAI (`gemini-2.5-flash`).
-- **Interfaz Interactiva:** Shell de comandos en terminal que permite interacción continua en tiempo real.
+---
 
-## 🛠️ Requisitos Previos e Instalación
+## 📂 Estructura del Repositorio
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/alexalex-cl/challenge-alura-oracle-one.git
-cd challenge-alura-oracle-one
+```text
+├── .gitignore                                 # Archivos ignorados por Git (.env, venv, etc.)
+├── README.md                                  # Documentación del proyecto
+├── app.py                                     # Código principal de la aplicación Streamlit
+├── requirements.txt                           # Dependencias de Python necesarias
+├── inventario_de_supermercado_latam.csv       # Dataset de productos e inventario
+└── politicas/                                 # Carpeta con los 4 archivos PDF de políticas
+    ├── Politica_Devoluciones.pdf
+    ├── Politica_Promociones.pdf
+    ├── Politica_Almacenamiento.pdf
+    └── Politica_Atencion_Cliente.pdf
