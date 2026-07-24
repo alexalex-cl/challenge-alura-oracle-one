@@ -10,6 +10,11 @@ Una aplicación web interactiva impulsada por Inteligencia Artificial (**Google 
 
 ---
 
+## Evidencia de Funcionamiento
+![Captura de pantalla: Respuesta a solicitud de información de productos en inventario](img/screenshot.png)
+
+---
+
 ## 📌 Características Principales
 
 * **Consulta de Inventario en Tiempo Real (CSV):** Análisis dinámico del archivo `inventario_de_supermercado_latam.csv` para verificar stock, precios, fechas de vencimiento, categorías y estado de productos.
@@ -45,3 +50,4 @@ Una aplicación web interactiva impulsada por Inteligencia Artificial (**Google 
     ├── Politica_Promociones.pdf
     ├── Politica_Almacenamiento.pdf
     └── Politica_Atencion_Cliente.pdf
+

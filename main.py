@@ -68,6 +68,8 @@ def consultar_gemini(prompt_usuario, df_inventario, texto_pdfs):
     INSTRUCCIONES:
     Responde a la siguiente consulta del usuario de forma precisa, profesional y estructurada. 
     Usa la información del inventario y contrástala con las políticas cuando corresponda.
+    Si la pregunta del usuario tiene relación con cuantificar productos y datos del inventario, da la respuesta en forma de tabla; siempre que pidan dos o mas datos de producto, 
+    y en forma de lista si te piden solo un dato de cada producto.
     
     PREGUNTA DEL USUARIO:
     {prompt_usuario}
