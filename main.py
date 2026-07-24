@@ -58,7 +58,8 @@ def consultar_gemini(prompt_usuario, df_inventario, texto_pdfs):
     No inventes información, solo responde con lo que sabes.  
     Si el usuario hace una pregunta que no tiene relación con el inventario o las políticas del supermercado,
     indícale que no puedes responder a esa pregunta y sugiere que haga una pregunta relacionada con el inventario o las políticas.
-    
+    al terminar la respuesta, siempre sugiere una pregunta de seguimiento para profundizar en el tema.
+         
     REGLAS Y POLÍTICAS DEL SUPERMERCADO:
     {texto_pdfs}
     
