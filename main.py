@@ -85,12 +85,12 @@ def consultar_gemini(prompt_usuario, df_inventario, texto_pdfs):
 
 # 5. FLUJO PRINCIPAL INTERACTIVO
 if __name__ == "__main__":
-    archivo_csv = "inventario_de_supermercado_latam.csv"
+    archivo_csv = "inventario/inventario_de_supermercado_latam.csv"
     archivos_pdf = [
-        "Manual de Proveedores y Política de Compras — Mercado Central 24h (México).pdf",
-        "Política de Atención al Cliente y Devoluciones — Mercado Central 24h (México).pdf",
-        "Preguntas Frecuentes (FAQ) — Mercado Central 24h (México).pdf",
-        "Reglamento Interno y Procedimientos Operativos — Mercado Central 24h (México).pdf"
+        "politicas/Manual de Proveedores y Política de Compras — Mercado Central 24h (México).pdf",
+        "politicas/Política de Atención al Cliente y Devoluciones — Mercado Central 24h (México).pdf",
+        "politicas/Preguntas Frecuentes (FAQ) — Mercado Central 24h (México).pdf",
+        "politicas/Reglamento Interno y Procedimientos Operativos — Mercado Central 24h (México).pdf"
     ]
     
     print("\n--- CARGANDO BASE DE DATOS Y DOCUMENTACIÓN ---")

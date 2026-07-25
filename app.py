@@ -26,18 +26,27 @@ client = genai.Client(api_key=api_key)
 @st.cache_resource
 def cargar_contexto():
     contexto = ""
-    # Lectura de CSV
-    if os.path.exists("inventario_de_supermercado_latam.csv"):
-        df = pd.read_csv("inventario_de_supermercado_latam.csv")
-        contexto += f"\n--- DATOS DE INVENTARIO (CSV) ---\n{df.to_string(index=False)}\n"
     
-    # Lectura de PDFs
-    for archivo in os.listdir("."):
-        if archivo.endswith(".pdf"):
-            reader = PdfReader(archivo)
-            texto_pdf = "".join([page.extract_text() for page in reader.pages if page.extract_text()])
-            contexto += f"\n--- DOCUMENTO POLITICA ({archivo}) ---\n{texto_pdf}\n"
-            
+    # 1. Lectura de CSV (ubicado en la carpeta 'inventario')
+    ruta_csv = os.path.join("inventario", "inventario_de_supermercado_latam.csv")
+    if os.path.exists(ruta_csv):
+        df = pd.read_csv(ruta_csv)
+        contexto += f"\n--- DATOS DE INVENTARIO (CSV) ---\n{df.to_string(index=False)}\n"
+    else:
+        st.warning(f"⚠️ No se encontró el archivo CSV en {ruta_csv}")
+    
+    # 2. Lectura de PDFs (ubicados en la carpeta 'politicas')
+    carpeta_politicas = "politicas"
+    if os.path.exists(carpeta_politicas):
+        for archivo in os.listdir(carpeta_politicas):
+            if archivo.endswith(".pdf"):
+                ruta_pdf = os.path.join(carpeta_politicas, archivo)
+                reader = PdfReader(ruta_pdf)
+                texto_pdf = "".join([page.extract_text() for page in reader.pages if page.extract_text()])
+                contexto += f"\n--- DOCUMENTO POLITICA ({archivo}) ---\n{texto_pdf}\n"
+    else:
+        st.warning(f"⚠️ No se encontró la carpeta {carpeta_politicas}")
+
     return contexto
 
 contexto_base = cargar_contexto()
