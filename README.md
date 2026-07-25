@@ -46,9 +46,13 @@ Una aplicación web interactiva impulsada por Inteligencia Artificial (**Google 
 ├── README.md                                  # Documentación del proyecto
 ├── app.py                                     # Código principal de la aplicación Streamlit
 ├── requirements.txt                           # Dependencias de Python necesarias
-├── inventario_de_supermercado_latam.csv       # Dataset de productos e inventario
+|
 ├── img/                                       # Carpeta contenedora de imágenes
 |   └── screenshot.png                         # Imagen con evidencia de funcionamiento del agente
+|
+├── inventario/                                # Carpeta contenedora de imágenes
+|   └── inventario_de_supermercado_latam.csv   # Dataset de productos e inventario
+|
 └── politicas/                                 # Carpeta con los 4 archivos PDF de políticas
     ├── Politica_Devoluciones.pdf
     ├── Politica_Promociones.pdf
