@@ -11,7 +11,9 @@ Una aplicación web interactiva impulsada por Inteligencia Artificial (**Google 
 ---
 
 ## Evidencia de Funcionamiento
-![Captura de pantalla: Respuesta a solicitud de información de productos en inventario](img/screenshot.png)
+![Captura de pantalla: Respuesta a solicitud de información sobre devolución de productos](img/screenshot-1.png)
+
+![Captura de pantalla: Respuesta a solicitud de información de productos en inventario](img/screenshot-2.png)
 
 ---
 
